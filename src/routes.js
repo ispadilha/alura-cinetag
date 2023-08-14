@@ -12,7 +12,7 @@ function AppRoutes() {
             <Container>
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
-                    <Route path="/favorites" element={<Favorites />}></Route>
+                    <Route path="/favoritos" element={<Favorites />}></Route>
                 </Routes>
             </Container>
             <Footer />
