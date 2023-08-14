@@ -1,0 +1,21 @@
+.container {
+    padding: 0 0 1em 0;
+    margin-top: .5em;
+    width: 202px;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cover {
+    width: 100%;
+}
+
+.container h2, .favOutline {
+    padding: 0 1em;
+}
+
+.favOutline {
+    width: 25px;
+}
