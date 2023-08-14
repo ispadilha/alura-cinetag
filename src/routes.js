@@ -5,6 +5,7 @@ import Favorites from "pages/Favorites"
 import Home from "pages/Home"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import FavoritesProvider from "contexts/FavoritesContext"
+import Player from "pages/Player"
 
 function AppRoutes() {
     return (
@@ -15,6 +16,7 @@ function AppRoutes() {
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
                     <Route path="/favoritos" element={<Favorites />}></Route>
+                    <Route path="/:id" element={<Player />}></Route>
                 </Routes>
                 </FavoritesProvider>
             </Container>
