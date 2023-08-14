@@ -27,7 +27,7 @@ export function useFavoriteContext() {
             return setFavorite(newList)
         }
 
-        novaLista = favorito.filter((fav) => fav.id !== novoFavorito.id);
+        newList = favorite.filter((fav) => fav.id !== newFavorite.id);
         return setFavorite(newList)
     }
     return {
