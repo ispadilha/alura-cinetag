@@ -2,8 +2,10 @@ import Banner from "components/Banner"
 import styles from "./Favorites.module.css"
 import Title from "components/Title"
 import Card from "components/Card"
+import { useFavoriteContext } from "contexts/FavoritesContext"
 
 function Favorites(){
+    const {favorite} = useFavoriteContext()
     return(
         <>
         <Banner image="favorites" />
@@ -11,7 +13,9 @@ function Favorites(){
             <h1>Meus Favoritos</h1>
         </Title>
         <section className={styles.container}>
-            <Card id="1" title="" cover="" />
+            {favorite.map((fav) => {
+                return <Card {...fav} key={fav.id} />
+            })}
         </section>
         </>
     )
