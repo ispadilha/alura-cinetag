@@ -7,22 +7,19 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import FavoritesProvider from "contexts/FavoritesContext"
 import Player from "pages/Player"
 import NotFound from "pages/NotFound"
+import Base from "pages/Base"
 
 function AppRoutes() {
     return (
         <BrowserRouter>
-            <Header />
-            <Container>
-                <FavoritesProvider>
-                <Routes>
-                    <Route path="/" element={<Home />}></Route>
-                    <Route path="/favoritos" element={<Favorites />}></Route>
-                    <Route path="/:id" element={<Player />}></Route>
+            <Routes>
+                <Route path="/" element={<Base />}>
+                    <Route index element={<Home />}></Route>
+                    <Route path="favoritos" element={<Favorites />}></Route>
+                    <Route path=":id" element={<Player />}></Route>
                     <Route path="*" element={<NotFound />}></Route>
-                </Routes>
-                </FavoritesProvider>
-            </Container>
-            <Footer />
+                </Route>
+            </Routes>
         </BrowserRouter>
     )
 }
